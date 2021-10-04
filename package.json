@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2"
+  },
+  "name": "raffle-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rafael Zago <rafaelszago@gmail.com>",
+  "license": "MIT"
+}
