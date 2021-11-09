@@ -1,8 +1,9 @@
-const faker = require('faker');
-const RaffleContract = artifacts.require("RaffleContract");
+const faker = require('faker')
+const RaffleContract = artifacts.require('RaffleContract')
+const truffleAssert = requre('truffle-assert')
 
 const makeSut = async () => {
-  contract = await RaffleContract.deployed();
+  contract = await RaffleContract.deployed()
   return { contract }
 }
 
@@ -14,15 +15,15 @@ const mockRaffle = () => ({
   endDate: parseInt(faker.date.future().getTime() / 1000).toFixed(0)
 })
 
-contract("Raffle", (accounts) => {
-  describe("Test raffle contract", async () => {
-    it("should deploy raffle contract and set correct owner", async () => {
+contract('Raffle', (accounts) => {
+  describe('Test raffle contract', async () => {
+    it('should deploy raffle contract and set correct owner', async () => {
       const { contract } = await makeSut()
       const owner = await contract.owner()
       assert.equal(owner, accounts[0])
-    });
+    })
 
-    it("should create a raffle with correct params", async () => {
+    it('should create a raffle with correct params', async () => {
       const { contract } = await makeSut()
       const raffleParams = mockRaffle()
       await contract.createRaffle(
@@ -35,9 +36,9 @@ contract("Raffle", (accounts) => {
       )
       const raffle = await contract.getRaffle(1)
       assert.equal(raffle.owner, accounts[1])
-    });
+    })
 
-    it("should buy a ticket and set correct owner", async () => {
+    it('should buy a ticket and set correct owner', async () => {
       const { contract } = await makeSut()
       const raffle = await contract.getRaffle(1)
       await contract.buyTicket(raffle.id, {
@@ -47,16 +48,16 @@ contract("Raffle", (accounts) => {
       const ticket = await contract.getTicket(raffle.id, 0)
       assert.equal(ticketsCount, 1)
       assert.equal(ticket.owner, accounts[0])
-    });
+    })
 
-    it("should split ticket value", async () => {
+    it('should split ticket value', async () => {
       const { contract } = await makeSut()
       const raffle = await contract.getRaffle(1)
       assert(raffle.prizeBalance > 0)
       assert(raffle.ownerBalance > 0)
-    });
+    })
 
-    it("should buy multiple tickets", async () => {
+    it('should buy multiple tickets', async () => {
       const { contract } = await makeSut()
       const raffle = await contract.getRaffle(1)
       await contract.buyTicket(raffle.id, {
@@ -73,27 +74,27 @@ contract("Raffle", (accounts) => {
       })
       const ticketsCount = await contract.getTicketsCount(1)
       assert.equal(ticketsCount, 5)
-    });
+    })
 
-    it("should finish raffle", async () => {
+    it('should finish raffle', async () => {
       const { contract } = await makeSut()
       await contract.finishRaffle(1, { from: accounts[1] })
       const raffle = await contract.getRaffle(1)
       assert.equal(raffle.status, 3)
-    });
+    })
 
-    it("should define a winner", async () => {
+    it('should define a winner', async () => {
       const { contract } = await makeSut()
       const raffle = await contract.getRaffle(1)
       assert(accounts.includes(raffle.winner))
-    });
+    })
 
-    it("should claim reward", async () => {
+    it('should claim reward', async () => {
       const { contract } = await makeSut()
       const raffle = await contract.getRaffle(1)
       await contract.claimReward(1, { from: raffle.winner })
       const raffleUpdated = await contract.getRaffle(1)
       assert.equal(raffleUpdated.prizeBalance, 0)
-    });
-  });
-});
+    })
+  })
+})
