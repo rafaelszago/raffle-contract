@@ -3,10 +3,8 @@ pragma solidity >=0.4.22 <0.9.0;
 
 contract RaffleContract {
   enum Status {
-    NotStarted,
-    Open,
-    Closed,
-    Completed
+    Active,
+    Finished
   }
 
   struct Ticket {
@@ -29,16 +27,21 @@ contract RaffleContract {
   }
 
   address public owner;
+  uint256 public ownerFeePercent;
   uint256 public rafflesCount;
   mapping(uint256 => Raffle) public raffles;
 
   constructor() {
     owner = msg.sender;
+    ownerFeePercent = 1;
     rafflesCount = 0;
   }
 
-  modifier onlyOwner(uint256 _raffleId) {
-    Raffle storage raffle = raffles[_raffleId];
+  event RaffleCreated(uint256 id, string name);
+  event TicketCreated(uint256 id, address owner);
+
+  modifier onlyOwner(uint256 raffleId) {
+    Raffle storage raffle = raffles[raffleId];
 
     require(
       msg.sender == raffle.owner,
@@ -47,89 +50,15 @@ contract RaffleContract {
     _;
   }
 
-  function createRaffle (
-    string memory _name,
-    uint256 _prizePercentage,
-    uint256 _ticketPrice,
-    uint256 _startDate,
-    uint256 _endDate
-  ) public {
-    require(_prizePercentage <= 100, "Value must be 100 or lower");
-    require(_prizePercentage >= 0, "Value must be 0 or greater");
-    rafflesCount++;
-    Raffle storage newRaffle = raffles[rafflesCount];
-    newRaffle.id = rafflesCount;
-    newRaffle.status = Status.NotStarted;
-    newRaffle.name = _name;
-    newRaffle.owner = msg.sender;
-    newRaffle.winner = 0x0000000000000000000000000000000000000000;
-    newRaffle.ownerBalance = 0;
-    newRaffle.prizePercentage = _prizePercentage;
-    newRaffle.prizeBalance = 0;
-    newRaffle.startDate = _startDate;
-    newRaffle.endDate = _endDate;
-    newRaffle.ticketPrice = _ticketPrice;
-    newRaffle.tickets;
-  }
+  modifier onlyActive(uint256 raffleId) {
+    Raffle storage raffle = raffles[raffleId];
 
-  function getRaffle (uint256 _raffleId) public view returns(Raffle memory) {
-    return raffles[_raffleId];
-  }
-
-  function getTicket (
-    uint256 _raffleId,
-    uint256 _ticketId
-  ) public
-    view
-    returns(Ticket memory) {
-    Raffle memory raffle = raffles[_raffleId];
-    return raffle.tickets[_ticketId];
-  }
-
-  function splitTicketValue (uint256 _raffleId, uint256 _value) internal {
-    Raffle storage raffle = raffles[_raffleId];
-    raffle.prizeBalance += (_value * raffle.prizePercentage) / 100;
-    raffle.ownerBalance += _value - (_value * raffle.prizePercentage / 100);
-  }
-
-  function buyTicket (uint256 _raffleId) public payable {
-    Raffle storage raffle = raffles[_raffleId];
-    require(raffle.ticketPrice <= msg.value, "Value is lower than ticket price");
     require(raffle.startDate <= block.timestamp, "Raffle didn't start yet");
     require(raffle.endDate >= block.timestamp, "Raffle already finished");
-    raffles[_raffleId].tickets.push(Ticket(msg.sender));
-    splitTicketValue(_raffleId, msg.value);
+    _;
   }
 
-  function getTicketsCount (uint256 _raffleId) public view returns (uint256) {
-    Raffle storage raffle = raffles[_raffleId];
-    return raffle.tickets.length;
-  }
-
-  function setWinner (uint256 _raffleId) public {
-    Raffle storage raffle = raffles[_raffleId];
-    require(raffle.startDate <= block.timestamp, "Raffle didn't start yet");
-    require(raffle.endDate <= block.timestamp, "Raffle is running");
-    uint256 winnerId = random(raffle.tickets.length);
-    raffle.winner = raffle.tickets[winnerId].owner;
-    raffle.status = Status.Completed;
-  }
-
-  function finishRaffle (uint256 _raffleId) onlyOwner(_raffleId) public {
-    Raffle storage raffle = raffles[_raffleId];
-    raffle.endDate = block.timestamp;
-    setWinner(_raffleId);
-  }
-
-  function claimReward (uint256 _raffleId) public payable {
-    Raffle storage raffle = raffles[_raffleId];
-    require(raffle.winner == msg.sender, "This function is restricted to the raffle's winner");
-    require(raffle.prizeBalance > 0, "This raffle hasn't prize");
-    payable(msg.sender).transfer(raffle.prizeBalance);
-    raffle.prizeBalance = 0;
-  }
-
-  function random(uint _maxValue) internal view returns (uint) {
+  function random(uint maxValue) internal view returns (uint) {
     return uint(
       keccak256(
         abi.encodePacked(
@@ -138,6 +67,80 @@ contract RaffleContract {
           block.difficulty
         )
       )
-    ) % _maxValue;
+    ) % maxValue;
+  }
+
+  function splitTicketValue (uint256 raffleId, uint256 value) internal {
+    Raffle storage raffle = raffles[raffleId];
+    raffle.prizeBalance += (value * raffle.prizePercentage) / 100;
+    raffle.ownerBalance += value - (value * raffle.prizePercentage / 100);
+  }
+
+  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 endDate) public {
+    require(prizePercentage <= 100, "Value must be 100 or lower");
+    require(prizePercentage >= 0, "Value must be 0 or greater");
+    require(ticketPrice >= 10000000000000000, "Value must be converted to Wei and be greater then 0.01 BNB");
+    require(endDate > block.timestamp, "Value must be after then today");
+    rafflesCount++;
+    Raffle storage newRaffle = raffles[rafflesCount];
+    newRaffle.id = rafflesCount;
+    newRaffle.status = Status.Active;
+    newRaffle.name = name;
+    newRaffle.owner = msg.sender;
+    newRaffle.winner = 0x0000000000000000000000000000000000000000;
+    newRaffle.ownerBalance = 0;
+    newRaffle.prizePercentage = prizePercentage;
+    newRaffle.prizeBalance = 0;
+    newRaffle.startDate = block.timestamp;
+    newRaffle.endDate = endDate;
+    newRaffle.ticketPrice = ticketPrice;
+    newRaffle.tickets;
+
+    emit RaffleCreated(newRaffle.id, newRaffle.name);
+  }
+
+  function getRaffle (uint256 raffleId) public view returns(Raffle memory) {
+    return raffles[raffleId];
+  }
+
+  function getTicket (uint256 raffleId, uint256 ticketId) public view returns(Ticket memory) {
+    Raffle memory raffle = raffles[raffleId];
+    return raffle.tickets[ticketId];
+  }
+
+  function buyTicket (uint256 raffleId) onlyActive(raffleId) public payable {
+    Raffle storage raffle = raffles[raffleId];
+    require(raffle.ticketPrice <= msg.value, "Value is lower than ticket price");
+    raffles[raffleId].tickets.push(Ticket(msg.sender));
+    splitTicketValue(raffleId, msg.value);
+    emit TicketCreated(raffle.tickets.length, msg.sender);
+  }
+
+  function getTicketsCount (uint256 raffleId) public view returns (uint256) {
+    Raffle storage raffle = raffles[raffleId];
+    return raffle.tickets.length;
+  }
+
+  function setWinner (uint256 raffleId) public {
+    Raffle storage raffle = raffles[raffleId];
+    require(raffle.startDate <= block.timestamp, "Raffle didn't start yet");
+    require(raffle.endDate <= block.timestamp, "Raffle is running");
+    uint256 winnerId = random(raffle.tickets.length);
+    raffle.winner = raffle.tickets[winnerId].owner;
+    raffle.status = Status.Finished;
+  }
+
+  function finishRaffle (uint256 raffleId) onlyOwner(raffleId) public {
+    Raffle storage raffle = raffles[raffleId];
+    raffle.endDate = block.timestamp;
+    setWinner(raffleId);
+  }
+
+  function claimReward (uint256 raffleId) public payable {
+    Raffle storage raffle = raffles[raffleId];
+    require(raffle.winner == msg.sender, "This function is restricted to the raffle's winner");
+    require(raffle.prizeBalance > 0, "This raffle hasn't prize");
+    payable(msg.sender).transfer(raffle.prizeBalance);
+    raffle.prizeBalance = 0;
   }
 }
