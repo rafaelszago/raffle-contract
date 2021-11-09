@@ -16,11 +16,31 @@ const mockRaffle = () => ({
 })
 
 contract('Raffle', async (accounts) => {
+  const raffleParams = mockRaffle()
+
   describe('Test raffle contract', async () => {
     it('should deploy raffle contract and set correct owner', async () => {
       const contract = await makeSut()
       const owner = await contract.owner()
       assert.equal(owner, accounts[0])
+    })
+  })
+
+  describe('Create raffle', async () => {
+    it('should return an exeception if prizePercentage is greater than 100', async () => {
+      const contract = await makeSut()
+      await truffleAssert.fails(
+        contract.createRaffle(
+          raffleParams.name,
+          101,
+          raffleParams.ticketPrice,
+          raffleParams.startDate,
+          raffleParams.endDate,
+          { from: accounts[1] }
+        ),
+        'revert',
+        'Value must be 100 or lower'
+      )
     })
   })
 })
