@@ -27,7 +27,7 @@ contract('Raffle', async (accounts) => {
   })
 
   describe('Create raffle', async () => {
-    it('should return an exeception if prizePercentage is greater than 100', async () => {
+    it('should return an exception if prizePercentage is greater then 100', async () => {
       const contract = await makeSut()
       await truffleAssert.fails(
         contract.createRaffle(
@@ -40,6 +40,21 @@ contract('Raffle', async (accounts) => {
         ),
         'revert',
         'Value must be 100 or lower'
+      )
+    })
+    it('should return an exception if ticketPrice is lower then 0.01 BNB', async () => {
+      const contract = await makeSut()
+      await truffleAssert.fails(
+        contract.createRaffle(
+          raffleParams.name,
+          raffleParams.prizePercentage,
+          raffleParams.ticketPrice - 10,
+          raffleParams.startDate,
+          raffleParams.endDate,
+          { from: accounts[1] }
+        ),
+        'revert',
+        'The minimum ticketPrice is 0.01 BNB'
       )
     })
   })
