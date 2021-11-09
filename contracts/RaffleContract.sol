@@ -76,9 +76,8 @@ contract RaffleContract {
     raffle.ownerBalance += value - (value * raffle.prizePercentage / 100);
   }
 
-  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 endDate) public {
+  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 startDate, uint256 endDate) public {
     require(prizePercentage <= 100, "Value must be 100 or lower");
-    require(prizePercentage >= 0, "Value must be 0 or greater");
     require(ticketPrice >= 10000000000000000, "Value must be converted to Wei and be greater then 0.01 BNB");
     require(endDate > block.timestamp, "Value must be after then today");
     rafflesCount++;
@@ -91,7 +90,7 @@ contract RaffleContract {
     newRaffle.ownerBalance = 0;
     newRaffle.prizePercentage = prizePercentage;
     newRaffle.prizeBalance = 0;
-    newRaffle.startDate = block.timestamp;
+    newRaffle.startDate = startDate;
     newRaffle.endDate = endDate;
     newRaffle.ticketPrice = ticketPrice;
     newRaffle.tickets;
