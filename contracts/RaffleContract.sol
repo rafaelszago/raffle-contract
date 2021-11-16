@@ -50,8 +50,8 @@ contract RaffleContract {
   }
 
   modifier onlyActive(uint256 raffleId) {
-    require(raffles[raffleId].startDate <= block.timestamp, "The raffle didn't started");
-    require(raffles[raffleId].endDate >= block.timestamp, "The raffle already finished");
+    require(raffles[raffleId].startDate * 1 days <= block.timestamp, "The raffle didn't started");
+    require(raffles[raffleId].endDate * 1 days >= block.timestamp, "The raffle already finished");
     _;
   }
 
@@ -77,8 +77,8 @@ contract RaffleContract {
     require(prizePercentage <= 100, "Prize percentage must be 100 or lower");
     require(prizePercentage >= 0, "Prize percentage must be 0 or greater");
     require(ticketPrice >= 0.01 ether, "Ticket price must be 0.01 BNB or greater");
-    require(startDate >= block.timestamp - 5 minutes, "Start date must be after than today");
-    require(endDate > startDate + 7 days, "End date must be at least one week");
+    require(startDate >= 0 days, "Start date must be after than today");
+    require(endDate >= startDate + 7 days, "End date must be at least one week");
     rafflesCount++;
     Raffle storage newRaffle = raffles[rafflesCount];
     newRaffle.id = rafflesCount;
@@ -109,8 +109,8 @@ contract RaffleContract {
 
   function buyTicket (uint256 raffleId) public payable {
     require(raffles[raffleId].ticketPrice <= msg.value, "Value is lower than ticket price");
-    require(raffles[raffleId].startDate <= block.timestamp, "The raffle didn't started");
-    require(raffles[raffleId].endDate >= block.timestamp, "The raffle already finished");
+    require(block.timestamp <= block.timestamp + (raffles[raffleId].startDate * 1 days), "The raffle didn't started");
+    require(block.timestamp <= block.timestamp + (raffles[raffleId].endDate * 1 days), "The raffle already finished");
     raffles[raffleId].tickets.push(Ticket(msg.sender));
     splitTicketValue(raffleId, msg.value);
     emit TicketCreated(raffles[raffleId].tickets.length, msg.sender);

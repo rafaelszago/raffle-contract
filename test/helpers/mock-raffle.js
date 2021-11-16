@@ -32,8 +32,8 @@ const mockCreateRaffleParams = (
   prizePercentage = 10,
   ticketPrice = toWei('0.2'),
   balanceGoal = 10,
-  startDate = parseInt(new Date().getTime() / 1000).toFixed(0),
-  endDate = parseInt(faker.date.soon(20).getTime() / 1000).toFixed(0)
+  startDate = 0,
+  endDate = 7 * 60 * 60 * 24
 ) => {
   return {
     name,

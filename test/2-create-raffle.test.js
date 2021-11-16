@@ -48,7 +48,7 @@ contract('Raffle', async (accounts) => {
           raffleParams.ticketPrice,
           raffleParams.balanceGoal,
           raffleParams.startDate,
-          parseInt(faker.date.past().getTime() / 1000).toFixed(0),
+          6,
           { from: accounts[1] }
         ),
         'revert',

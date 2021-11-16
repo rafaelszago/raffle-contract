@@ -1,10 +1,7 @@
 const { makeSut, mockCreateRaffleParams, makeRaffle } = require('./helpers/mock-raffle')
-const { toBN } = require('web3-utils')
 const truffleAssert = require('truffle-assertions')
 
 contract('Raffle', async (accounts) => {
-  const raffleParams = mockCreateRaffleParams()
-
   describe('Buy ticket', async () => {
     it('should return an execption if value send is lower than ticketPrice', async () => {
       const contract = await makeSut()
