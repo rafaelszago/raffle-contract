@@ -18,6 +18,7 @@ contract RaffleContract {
     address owner;
     address winner;
     uint256 ownerBalance;
+    uint256 balanceGoal;
     uint256 prizePercentage;
     uint256 prizeBalance;
     uint256 startDate;
@@ -41,20 +42,16 @@ contract RaffleContract {
   event TicketCreated(uint256 id, address owner);
 
   modifier onlyOwner(uint256 raffleId) {
-    Raffle storage raffle = raffles[raffleId];
-
     require(
-      msg.sender == raffle.owner,
+      msg.sender == raffles[raffleId].owner,
       "This function is restricted to the raffle's owner"
     );
     _;
   }
 
   modifier onlyActive(uint256 raffleId) {
-    Raffle storage raffle = raffles[raffleId];
-
-    require(raffle.startDate <= block.timestamp, "Raffle didn't start yet");
-    require(raffle.endDate >= block.timestamp, "Raffle already finished");
+    require(raffles[raffleId].startDate <= block.timestamp, "The raffle didn't started");
+    require(raffles[raffleId].endDate >= block.timestamp, "The raffle already finished");
     _;
   }
 
@@ -76,10 +73,12 @@ contract RaffleContract {
     raffle.ownerBalance += value - (value * raffle.prizePercentage / 100);
   }
 
-  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 startDate, uint256 endDate) public {
-    require(prizePercentage <= 100, "Value must be 100 or lower");
-    require(ticketPrice >= 10000000000000000, "Value must be converted to Wei and be greater then 0.01 BNB");
-    require(endDate > block.timestamp, "Value must be after then today");
+  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 balanceGoal, uint256 startDate, uint256 endDate) public {
+    require(prizePercentage <= 100, "Prize percentage must be 100 or lower");
+    require(prizePercentage >= 0, "Prize percentage must be 0 or greater");
+    require(ticketPrice >= 0.01 ether, "Ticket price must be 0.01 BNB or greater");
+    require(startDate >= block.timestamp - 5 minutes, "Start date must be after than today");
+    require(endDate > startDate + 7 days, "End date must be at least one week");
     rafflesCount++;
     Raffle storage newRaffle = raffles[rafflesCount];
     newRaffle.id = rafflesCount;
@@ -88,6 +87,7 @@ contract RaffleContract {
     newRaffle.owner = msg.sender;
     newRaffle.winner = 0x0000000000000000000000000000000000000000;
     newRaffle.ownerBalance = 0;
+    newRaffle.balanceGoal = balanceGoal;
     newRaffle.prizePercentage = prizePercentage;
     newRaffle.prizeBalance = 0;
     newRaffle.startDate = startDate;
@@ -107,12 +107,13 @@ contract RaffleContract {
     return raffle.tickets[ticketId];
   }
 
-  function buyTicket (uint256 raffleId) onlyActive(raffleId) public payable {
-    Raffle storage raffle = raffles[raffleId];
-    require(raffle.ticketPrice <= msg.value, "Value is lower than ticket price");
+  function buyTicket (uint256 raffleId) public payable {
+    require(raffles[raffleId].ticketPrice <= msg.value, "Value is lower than ticket price");
+    require(raffles[raffleId].startDate <= block.timestamp, "The raffle didn't started");
+    require(raffles[raffleId].endDate >= block.timestamp, "The raffle already finished");
     raffles[raffleId].tickets.push(Ticket(msg.sender));
     splitTicketValue(raffleId, msg.value);
-    emit TicketCreated(raffle.tickets.length, msg.sender);
+    emit TicketCreated(raffles[raffleId].tickets.length, msg.sender);
   }
 
   function getTicketsCount (uint256 raffleId) public view returns (uint256) {
