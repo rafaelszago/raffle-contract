@@ -101,7 +101,7 @@ contract RaffleContract {
     newRaffle.ticketPrice = ticketPrice;
     newRaffle.ticketGoal = ticketGoal;
     newRaffle.startDate = block.timestamp;
-    newRaffle.endDate = block.timestamp + 7 days;
+    newRaffle.endDate = block.timestamp + 30 days;
     newRaffle.tickets;
 
     emit RaffleCreated(newRaffle.id, newRaffle.name);
