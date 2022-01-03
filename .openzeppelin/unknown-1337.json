@@ -1,0 +1,3456 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x13Aae1C2eb650a03D6B170d0A391ee8E0aBD4B6b",
+    "txHash": "0x7f66570e6cac11c0979b00f06a6cf27b55f2e79d1b8b2f9fbe0224afbe2b8fda"
+  },
+  "proxies": [
+    {
+      "address": "0x16579a6665b79bd59ee1489C1fB758FabA7d228B",
+      "txHash": "0x222c38385610c4b2d99ef7a12883eb607b04c2d36e2fcf045576fe857f75f11e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x13402c04A6f7d2B4C1862F96C43B2cfc0c4C8A94",
+      "txHash": "0x191d0aadc4f1eb5fe6ba0eadec4ac28dd02b1001f476a73e4138e1228e273396",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xE29B1563DB9116a7Bdf1C8328Cd38162e6eec993",
+      "txHash": "0x728b987e4f0220be974369a9623f8258511e99547c92bad1398fd09fe891bc67",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x02304379D9d8d24399da74DdB77CD2fB20d30159",
+      "txHash": "0xee54fe59652ee818d82568bc3a3046dab4fbcb30d8b025255cab68de83016033",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb4EAFBABC1f46e776817d6d849269D99e1131873",
+      "txHash": "0xd33be5baa6ed7b7d775209967e04a906955cc5c50dbbef38123bc325a145dba1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xf212Deb550EF26103c79e2326BA622434B9E4649",
+      "txHash": "0x01dc65e50e869229c35e712c07fa9c0ff28425bae16030ca538afec0894e5a07",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x44C118f060f2963456811Ec734ceF51c753d6420",
+      "txHash": "0x3d7f7ada78eac673533f40aad56080e4a0abac392b275a095323ed545cff2be9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc1939b983e95b84a828d2da079a85caE3020b373",
+      "txHash": "0xeef69fbe97930e1fb2611e9b304828e46a8f6a856049e4d4306da2fa5a4e08a2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xf61FF4f55C79A62498921444b78BD0c29bdf8A65",
+      "txHash": "0x2ef226ccd29c5eccd29c4250b472eb10d9b94302596711797fb5e2bfa4b8a9da",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x65653667b9B299D5A57a765956E046d7518F897C",
+      "txHash": "0xc46e8f5ce10cf4ad3672cd8e460bbee804c14ac9aaab8e0cf80ba33161906471",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x14430EA019206E6B1D75c7A397Db4581460ff4cB",
+      "txHash": "0xa8c2d2b41bb9a2ddbabed1e394532550efc411793f80ed35c87bf0dc33acb0ac",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x02C9e054b30ff7695f094d5FD4ca9E26EDCd0217",
+      "txHash": "0x82084841844bd2daf7480a0a71fe5b79c0c233c206c26f6c2fa7c9384fc8c80e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xC6BD55C3Bf0636B83D7045BaC22301aDb9c8722b",
+      "txHash": "0xc1890c91d4c91541ebe09741a51e28b55881429207630d57f320ede9a22a44da",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD64028c94aFE190715ae59bbc3C6Cc733C6bad0F",
+      "txHash": "0xb179972586f27a5d312eab04996bdb4d0a31041083e4faa121e40d5f85f0d54c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0fE28dc6bCE953394c158a43935b80e4D87112A5",
+      "txHash": "0x35b07acea18914e401608b9ce17a51dce909bbe97d7e6739095c9b815e96fa44",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5b683B01EE2A97adB4039949Bbf00a7663d03fB6",
+      "txHash": "0xc53f142eaa8042116f43f52b06a6bd3fb2c6d0e65651a8dd83deb6f7ce2f8ab5",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x62ba0a2b44BA699b0be373a5D4E063e51bbF1550",
+      "txHash": "0x232c64a4caeb83a441ae48fbd63fd9e0552bc5543142fcfb20fe5698de9df566",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x39fCafB54b7ec47275c880119a0c99DC0264CC11",
+      "txHash": "0x274bd328d718c7d5db9354750ba4f4a2269c782e7be2f34158efd811fcbe6eab",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb180F8Fd88181F15B300feA59D60E1FF84E646aB",
+      "txHash": "0x7178b2c4ed7d6e3f02d50776c998af386fde1df9fdef2b7e7e8c537d7e033a37",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x46674692182B70Af377faA04FfD570324CB790bA",
+      "txHash": "0xf5dc8f3ff0a0409472283cc132418372a586d68c335c5e9e816014b3ee834281",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x914595e4E5d6BE5137f22BB4E9b19d6f51DB364F",
+      "txHash": "0x59358584d73ead5db41670e0d8b43e340955eacee908327840903100724f1afb",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4bf419510BeC3d418C8BfF35bdb40F8ceF40c139",
+      "txHash": "0x7d643903c836fe837986743a2a6474aec429a85440f60397fa5f0d298773a7d2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8470437F1c8d5c37fe7CCa85404073B8243A9328",
+      "txHash": "0xbd868aca33c7fc310a25e530388fd9bb6a06b644daf9850e7deade9d311c615c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6320E3FFb04061f502395b4ab32E1390147d7399",
+      "txHash": "0x4ac6c322861607c3edf86ab83005c9dd1fc73bf96614ca3f00d18353627dadea",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xf195ED41b7372839e6eED9AE4e6a59Ac2Dd1bb05",
+      "txHash": "0x3117f96579e32c53ca5acc4508db4c99fbad0809695536a4050b527402887a53",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xa626A7Cfeb09b7a72276aA51080f461ff68E1126",
+      "txHash": "0x2904579db0848c0bb997ffe67e7a65e178c41018a3cd8feeae2bef41812a41ea",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1c66508A6D9f94C2cB8425E556774Cd1c0a55289",
+      "txHash": "0x4c8133f970fb639ba43e2a90a8e69c3eb674184cf73d6c2bed5cda0e492a7d2d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x912f669A52db986b7Eae0C4c95Eef2cF6594FB70",
+      "txHash": "0xf747adf6b2a48d7de45353e0359a7e81631676931b102dca8450010646be10c4",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x280f06d1b1f8E03c96Bc4eE7fAc8C67aAE069DE0",
+      "txHash": "0xbe85e93e21996e91a7f8b5bee4dfe158e51b99a24a7e42b9cc251d9e0b77e75d",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "4781dd9c7e47cb522aef41e80af9fd5e14159ab2809098ca7d7b0ac4a6bd5f22": {
+      "address": "0xFC4aad68CE0F8f8F7492B3f37D1BFaFac4C0E69f",
+      "txHash": "0xfd74aee17973c5b4f94d4c451f1330bb5d34f5bef9fca55474b88a85f316115b",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:32"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:33"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:34"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)86_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)86_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)86_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)53"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_address"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)56_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)53": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)56_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)56_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "87ed38dfaf366c6ea3da25e701f5298d71c1f9709c7cf80fe714740c724cc06c": {
+      "address": "0x4dB3430bD2bE39F8fa322bdBe6F974a983e71e5e",
+      "txHash": "0x9f7af0b1527e711161f82a65b438b8f0332bb761f0ef7401fa61cd7bd5201322",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:32"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:33"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:34"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)86_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)86_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)86_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)53"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_address"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)56_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)53": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)56_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)56_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "1dca6099d0b2fba5df118d7e5e3c39bf71bbc94da284cdcfd2075cf83ba00bf0": {
+      "address": "0xd9478829a0e486aea6a2AdA1f24A5055cD4e40d6",
+      "txHash": "0x06781343fadb21c34cde26d25d2097b2ec39007b3612123d635fc9717ebc21a9",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:32"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:33"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:34"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)86_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)86_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)86_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)53"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_address"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)56_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)53": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)56_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)56_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "3d70d094ed17531a3aa81407546c7d1c3747c265754eee8cee345e2a96eeff30": {
+      "address": "0xc2EB9df5feBeC81B05B1a76f01F3dfa086953bF1",
+      "txHash": "0x5bc5680d9409078bb036f8236f90da7a58e73d3092847f9129054583534cb8ba",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:32"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:33"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:34"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)86_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)86_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)86_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)53"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_address"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)56_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)53": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)56_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)56_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "8dc58fdcfa240390a2b776941460fe67ac24bc022d5f078142570e87e534e70c": {
+      "address": "0x1d345Adc76a7FE7A30132396a996A85b4c2DCd51",
+      "txHash": "0x2c007e648439324091cb7526ae6df306f99269ff23f6f451dc39514e02ebaeaf",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:36"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:37"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)91_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:38"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)91_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)91_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)54"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)61_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)54": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)61_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)61_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "01732e47a4a8e12ac1976299faf3c166a763d79b509517f87b1ae619c5c20ffe": {
+      "address": "0xD73c547E5C6ABaAC6f9E420568bA08DE07aF361F",
+      "txHash": "0x802a57cccd1ed04125b991bac65c00be55cd3d89e7c0d2146abcffadcb0e6b3e",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "owner",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:35"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "ownerFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:36"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:37"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)91_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:38"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)91_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)91_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)54"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)61_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)54": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)61_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)61_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "37481fd67693465fc43e7c95e62520e1eb1e10bc23378a7c3264e5ba2d198121": {
+      "address": "0x5eB2d7a4B6AB5eecA391A56e90855BB35CaA35E6",
+      "txHash": "0x3c4bea92bffac6753277acdd90e07b407857d414d020a9053f5bf26734397bf6",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)112_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)112_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)112_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)75"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)82_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)75": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)82_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)82_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "05bb8e45dbdb2d41c9857af09e21679e19d1986f36e8d9bdba2991821feabb16": {
+      "address": "0xAa70ee4Ac9D337aF51f3A3ccf2E59407649C9D2c",
+      "txHash": "0xf097bf887167111d51a6f795869be735f81fb271dc1501af0bdeb0a97b75de6b",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "06d8cb9039492e9b7fae2749b3823257aa732d453065c76317c7eb2798e01109": {
+      "address": "0x823766e61260FA6756e03ad83a4c7a599675da06",
+      "txHash": "0xad1f6ebd348bc74fe3323f5fd63a31d93af8fe84ad9ec31f71e9ab95a6265b66",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "6842f075051077386459f9f49d61238e58ee85018bacfc88767d8a6340a9fe76": {
+      "address": "0x493E3c613c6dD15C3CA1b256684312803446531A",
+      "txHash": "0x99926c820588a4113c4770b39dfb19a3e1ce1195655c969e3e983c2363c875f2",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "8e5b008dcfc37591a20b96bb4322128e534a8fc46fed2bef6a0bc6bd4d23088e": {
+      "address": "0x64A5A22010C029B28cB518342EA07307cc01AE43",
+      "txHash": "0xee40656de4a3c8868cb08d443b190ec11f897cee5000806c18eb33deff4c3044",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "1e4d9ffc1b6558e7fc28464286df0bf0610cb65f0992f133795b4ccad8c5ae0d": {
+      "address": "0x5E177dd2C02f3a13178a6fe152bfA82258d78553",
+      "txHash": "0xdccc92a5d38431b1d80e42235abd966b7868e29bcc066c40b37069aa9847088c",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "29ec9a84ad9b525716e097fc5eb04ba16d6e03386cae2ba9d56f62e4a83f09af": {
+      "address": "0x26E806110462a66946b86dAd04dD0e5Fa5ecE54f",
+      "txHash": "0x311f0d18e984a4fee01c693e1702af9a9b84b78a7b5bf4855003dd22164cb743",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "c1eace989e8f9da1582378eb7ebf85f817a9600950b7fd9fc299845ade5c083b": {
+      "address": "0x378f3171740Ac3C26b9f71c0F06ba910131f3cA6",
+      "txHash": "0x64fd8acd6710489aabd0203363dcc1c5adddb280fc01d8d9811a8c7990d05be3",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "b7521998f9835c1a8f215099c327c1c7364b1fdb538057d2d554647923412ba1": {
+      "address": "0x1CcE922F84d7fE48b15f9dd81AE9a4d79Ff8EaF6",
+      "txHash": "0x4f5f9a8359c9f6476deaf6ba6eb7e1c6cd7ebe72f5ee22e10b43584ec0d971b6",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "8a5938a286852eeb0ed6bef82801906a79078e52ac02e7db62c002985808cce5": {
+      "address": "0xDdB60FD15cd0154B2b9fD75e2D2344ac42B5c151",
+      "txHash": "0x7d0202230fd32f0dd50b53a7bb58f54bb46a79e1b7336573359b5de8c15952bc",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "1000614ddc0cfadac2c052e859ee2c1d9e994d98fcaeae2e9e6cf5d90b7390bf": {
+      "address": "0xF416c6d2888D9553e10e3ad4c0eD62f7E7d1D15d",
+      "txHash": "0xf788609bf189fdf718fd5f8ec7291554c3ff4d23fa7361f7908b0277a547d8c4",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "9985ebdf76f25a987bf9dde6c23497ad1d04b2d42917bdc15786e86c5a9a8980": {
+      "address": "0x451f92a95645c953a824d98242c88a55a1440db6",
+      "txHash": "0xd7235d19aefabd956395736112421b5d561c8533b1c8b8de35e2aa7ac10fea97",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "3a4a119c6c3221f58230066f9f0aed5ba97690b98a9ab5775f5f446a33f05dbf": {
+      "address": "0x7068F82475f27c2d11761B1fdB332B286Db59340",
+      "txHash": "0x49c97452415d2e5e8600429444a613f2e1ad412adb5b8f07085dc47cecb4a357",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "16c772ad690dbbd2f862ed11a6294318dbc1906c5f905d01b4da95c475da95f1": {
+      "address": "0x8C0c93EFA96Bc55fFfabA2026ff597F095256B25",
+      "txHash": "0x42bc6aebbc9334ac3813618843d29d4bfb0a66af1bb05be5c062c1c0fa40eea2",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "6255751560a24138b09cefd33471ee0500c8cd15cd5c670cc1098c54e9f6d606": {
+      "address": "0x3E6248c5BC854d6Ea0A0B7cE7E37Cc34C25f68b7",
+      "txHash": "0xf28a25bda00164560d9973ccb09a1631c89ff2d3059effbfe9f445b2cbbde2ae",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:37"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../project:/contracts/Initializable.sol:42"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "admin",
+            "type": "t_address",
+            "src": "../project:/contracts/RaffleContract.sol:10"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeePercent",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:11"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "adminFeeBalance",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:12"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "rafflesCount",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:13"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedReward",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:14"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "totalClaimedOwner",
+            "type": "t_uint256",
+            "src": "../project:/contracts/RaffleContract.sol:15"
+          },
+          {
+            "contract": "RaffleContract",
+            "label": "raffles",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)145_storage)",
+            "src": "../project:/contracts/RaffleContract.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)145_storage)": {
+            "label": "mapping(uint256 => struct RaffleContract.Raffle)"
+          },
+          "t_struct(Raffle)145_storage": {
+            "label": "struct RaffleContract.Raffle",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)108"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "winner",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownerBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizePercentage",
+                "type": "t_uint256"
+              },
+              {
+                "label": "prizeBalance",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ticketGoal",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endDate",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tickets",
+                "type": "t_array(t_struct(Ticket)115_storage)dyn_storage"
+              }
+            ]
+          },
+          "t_enum(Status)108": {
+            "label": "enum RaffleContract.Status",
+            "members": [
+              "Active",
+              "Finished",
+              "Completed"
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Ticket)115_storage)dyn_storage": {
+            "label": "struct RaffleContract.Ticket[]"
+          },
+          "t_struct(Ticket)115_storage": {
+            "label": "struct RaffleContract.Ticket",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address"
+              },
+              {
+                "label": "claimed",
+                "type": "t_bool"
+              },
+              {
+                "label": "createdAt",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    }
+  }
+}

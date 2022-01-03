@@ -1,5 +1,5 @@
 const truffleAssert = require('truffle-assertions')
-const { makeSut, mockCreateRaffleParams } = require('./helpers/mock-raffle')
+const { makeSut, mockCreateRaffleParams } = require('../test/helpers/mock-raffle')
 
 contract('Raffle', async (accounts) => {
   describe('Create raffle', async () => {

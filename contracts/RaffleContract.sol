@@ -1,14 +1,30 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.10;
+
+import "./SafeMath.sol";
 
 contract RaffleContract {
+  using SafeMath for uint256;
+
+  address public admin;
+  uint256 public adminFeePercent;
+  uint256 private adminFeeBalance;
+  uint256 public rafflesCount;
+  uint256 public totalClaimedReward;
+  uint256 public totalClaimedOwner;
+
+  mapping(uint256 => Raffle) public raffles;
+
   enum Status {
     Active,
-    Finished
+    Finished,
+    Completed
   }
 
   struct Ticket {
     address owner;
+    bool claimed;
+    uint256 createdAt;
   }
 
   struct Raffle {
@@ -16,7 +32,7 @@ contract RaffleContract {
     Status status;
     string name;
     address owner;
-    address winner;
+    uint256 winner;
     uint256 ownerBalance;
     uint256 prizePercentage;
     uint256 prizeBalance;
@@ -27,17 +43,7 @@ contract RaffleContract {
     Ticket[] tickets;
   }
 
-  address public owner;
-  uint256 public ownerFeePercent;
-  uint256 public rafflesCount;
-  mapping(uint256 => Raffle) public raffles;
-
-  constructor() {
-    owner = msg.sender;
-    ownerFeePercent = 1;
-    rafflesCount = 0;
-  }
-
+  // Raffle Events
   event RaffleCreated(uint256 id, string name);
   event RaffleFinished(uint256 id, string name);
   event TicketCreated(uint256 id, address owner);
@@ -45,29 +51,45 @@ contract RaffleContract {
   event RewardClaimed(uint256 raffleId, uint256 prizeBalance);
   event OwnerBalanceClaimed(uint256 raffleId, uint256 ownerBalance);
 
-  modifier onlyOwner(uint256 raffleId) {
+  constructor() {
+    admin = msg.sender;
+    adminFeePercent = 5;
+    rafflesCount = 0;
+    totalClaimedOwner = 0;
+    totalClaimedReward = 0;
+  }
+
+  // Modifiers
+  modifier onlyAdmin() {
+    require(msg.sender == admin, "This function is restricted to the admin");
+    _;
+  }
+
+  modifier onlyOwner(uint256 _raffleId) {
     require(
-      msg.sender == raffles[raffleId].owner,
+      msg.sender == raffles[_raffleId].owner,
       "This function is restricted to the raffle's owner"
     );
     _;
   }
 
-  modifier onlyActive(uint256 raffleId) {
-    require(raffles[raffleId].startDate <= block.timestamp, "The raffle didn't started");
-    require(raffles[raffleId].endDate >= block.timestamp, "The raffle already finished");
+  modifier onlyActive(uint256 _raffleId) {
+    require(raffles[_raffleId].startDate <= block.timestamp, "The raffle didn't started");
+    require(raffles[_raffleId].endDate >= block.timestamp, "The raffle already finished");
+    require(raffles[_raffleId].status == Status.Active, "The raffle already finished");
     _;
   }
 
-  modifier onlyFinished(uint256 raffleId) {
-    require(raffles[raffleId].startDate <= block.timestamp, "Raffle didn't start yet");
-    require(raffles[raffleId].endDate <= block.timestamp, "Raffle is running");
-    require(raffles[raffleId].status == Status.Finished, "Raffle is running");
+  modifier onlyFinished(uint256 _raffleId) {
+    require(raffles[_raffleId].startDate <= block.timestamp, "Raffle didn't start yet");
+    require(raffles[_raffleId].endDate <= block.timestamp, "Raffle is running");
+    require(raffles[_raffleId].status == Status.Finished, "Raffle is running");
     _;
   }
 
-  function random(uint maxValue) internal view returns (uint) {
-    return uint(
+  // Internal functions
+  function generateRandomNumber(uint256 _maxValue) internal view returns (uint256) {
+    return uint256(
       keccak256(
         abi.encodePacked(
           block.timestamp,
@@ -75,98 +97,153 @@ contract RaffleContract {
           block.difficulty
         )
       )
-    ) % maxValue;
+    ).mod(_maxValue);
   }
 
-  function splitTicketValue (uint256 raffleId, uint256 value) internal {
-    Raffle storage raffle = raffles[raffleId];
-    raffle.prizeBalance += (value * raffle.prizePercentage) / 100;
-    raffle.ownerBalance += value - (value * raffle.prizePercentage / 100);
+  function splitTicketValue(uint256 _raffleId, uint256 _value) internal {
+    Raffle storage raffle = raffles[_raffleId];
+    uint256 fee = _value.mul(adminFeePercent).div(100);
+    adminFeeBalance += fee;
+    uint256 valueTotal = _value.sub(fee);
+    uint256 prizeBalance = valueTotal.mul(raffle.prizePercentage).div(100);
+    uint256 ownerBalance = valueTotal.sub(prizeBalance);
+    raffle.prizeBalance += prizeBalance;
+    raffle.ownerBalance += ownerBalance;
   }
 
-  function createRaffle (string memory name, uint256 prizePercentage, uint256 ticketPrice, uint256 ticketGoal) public {
-    require(prizePercentage <= 100, "Prize percentage must be 100 or lower");
-    require(prizePercentage >= 0, "Prize percentage must be 0 or greater");
-    require(ticketPrice >= 0.01 ether, "Ticket price must be 0.01 BNB or greater");
+  // Raffle functions
+  function createRaffle(string memory _name, uint256 _prizePercentage, uint256 _ticketPrice, uint256 _ticketGoal) public {
+    require(_prizePercentage <= 100, "Prize percentage must be 100 or lower");
+    require(_prizePercentage >= 0, "Prize percentage must be 0 or greater");
+    require(_ticketGoal >= 10, "Ticket goal must be 10 or greater");
+    require(_ticketPrice >= 0.01 ether, "Ticket price must be 0.01 BNB or greater");
+
     rafflesCount++;
-    Raffle storage newRaffle = raffles[rafflesCount];
-    newRaffle.id = rafflesCount;
-    newRaffle.status = Status.Active;
-    newRaffle.name = name;
-    newRaffle.owner = msg.sender;
-    newRaffle.winner = 0x0000000000000000000000000000000000000000;
-    newRaffle.ownerBalance = 0;
-    newRaffle.prizePercentage = prizePercentage;
-    newRaffle.prizeBalance = 0;
-    newRaffle.ticketPrice = ticketPrice;
-    newRaffle.ticketGoal = ticketGoal;
-    newRaffle.startDate = block.timestamp;
-    newRaffle.endDate = block.timestamp + 30 days;
-    newRaffle.tickets;
 
-    emit RaffleCreated(newRaffle.id, newRaffle.name);
+    Raffle storage raffle = raffles[rafflesCount];
+    raffle.id = rafflesCount;
+    raffle.status = Status.Active;
+    raffle.name = _name;
+    raffle.owner = msg.sender;
+    raffle.ownerBalance = 0;
+    raffle.prizePercentage = _prizePercentage;
+    raffle.prizeBalance = 0;
+    raffle.ticketPrice = _ticketPrice;
+    raffle.ticketGoal = _ticketGoal;
+    raffle.startDate = block.timestamp;
+    raffle.endDate = block.timestamp + 30 days;
+    raffle.tickets;
+
+    emit RaffleCreated(raffle.id, raffle.name);
   }
 
-  function getRaffle (uint256 raffleId) public view returns(Raffle memory) {
-    return raffles[raffleId];
+  function getRaffle(uint256 _raffleId) public view returns(Raffle memory) {
+    return raffles[_raffleId];
   }
 
-  function getTicket (uint256 raffleId, uint256 ticketId) public view returns(Ticket memory) {
-    Raffle memory raffle = raffles[raffleId];
-    return raffle.tickets[ticketId];
-  }
+  function finishRaffle(uint256 _raffleId) internal {
+    require(raffles[_raffleId].tickets.length > 0, "Raffle didn't have any ticket");
+    require(raffles[_raffleId].tickets.length == raffles[_raffleId].ticketGoal, "Raffle didn't have any ticket");
 
-  function buyTicket (uint256 raffleId) onlyActive(raffleId) public payable {
-    require(raffles[raffleId].ticketPrice <= msg.value, "Value is lower than ticket price");
-    raffles[raffleId].tickets.push(Ticket(msg.sender));
-    splitTicketValue(raffleId, msg.value);
-    emit TicketCreated(raffles[raffleId].tickets.length, msg.sender);
-  }
-
-  function getTicketsCount (uint256 raffleId) public view returns (uint256) {
-    Raffle storage raffle = raffles[raffleId];
-    return raffle.tickets.length;
-  }
-
-  function setWinner (uint256 raffleId) onlyFinished(raffleId) public {
-    Raffle storage raffle = raffles[raffleId];
-    uint256 winnerId = random(raffle.tickets.length);
-    raffle.winner = raffle.tickets[winnerId].owner;
-
-    emit WinnerDefined(raffleId, raffle.winner);
-  }
-
-  function finishRaffle (uint256 raffleId) onlyOwner(raffleId) public {
-    require(raffles[raffleId].tickets.length > 0, "Raffle didn't have any ticket");
-
-    Raffle storage raffle = raffles[raffleId];
+    Raffle storage raffle = raffles[_raffleId];
     raffle.status = Status.Finished;
     raffle.endDate = block.timestamp;
 
-    emit RaffleFinished(raffleId, raffle.name);
+    emit RaffleFinished(_raffleId, raffle.name);
   }
 
-  function claimReward (uint256 raffleId) public payable {
-    require(raffles[raffleId].winner == msg.sender, "This function is restricted to the raffle's winner");
-    require(raffles[raffleId].prizeBalance > 0, "This raffle hasn't prize");
+  function setWinner(uint256 _raffleId) onlyFinished(_raffleId) internal {
+    uint256 winnerId = generateRandomNumber(raffles[_raffleId].tickets.length);
+    raffles[_raffleId].winner = winnerId;
 
-    Raffle storage raffle = raffles[raffleId];
-
-    payable(msg.sender).transfer(raffle.prizeBalance);
-
-    emit RewardClaimed(raffleId, raffle.prizeBalance);
-
-    raffle.prizeBalance = 0;
+    emit WinnerDefined(_raffleId, raffles[_raffleId].tickets[winnerId].owner);
   }
 
-  function claimOwnerBalance (uint256 raffleId) onlyOwner(raffleId) onlyFinished(raffleId) public payable {
-    require(raffles[raffleId].ownerBalance > 0, "This raffle hasn't prize");
+  function checkWinner(uint256 _raffleId) onlyFinished(_raffleId) public view returns (Ticket memory) {
+    Raffle storage raffle = raffles[_raffleId];
+    return raffles[_raffleId].tickets[raffle.winner];
+  }
 
-    Raffle storage raffle = raffles[raffleId];
-    payable(msg.sender).transfer(raffle.prizeBalance);
+  // Ticket functions
+  function getTicket(uint256 _raffleId, uint256 _ticketId) public view returns(Ticket memory) {
+    Raffle memory raffle = raffles[_raffleId];
+    return raffle.tickets[_ticketId];
+  }
 
-    emit OwnerBalanceClaimed(raffleId, raffle.ownerBalance);
+  function getTickets(uint256 _raffleId) public view returns(Ticket[] memory) {
+    Raffle storage raffle = raffles[_raffleId];
+    return raffle.tickets;
+  }
 
-    raffle.ownerBalance = 0;
+  function buyTicket(uint256 _raffleId, uint256 _ticketsTotal) onlyActive(_raffleId) public payable {
+    require(raffles[_raffleId].ticketPrice.mul(_ticketsTotal) <= msg.value, "Value is lower than ticket price");
+    require(_ticketsTotal >= 1, "You must buy one ticket at least");
+    require(_ticketsTotal <= raffles[_raffleId].ticketGoal.sub(raffles[_raffleId].tickets.length), "Insufficient tickets available");
+
+    if (_ticketsTotal > 1) {
+      for (uint256 i = 0; i < _ticketsTotal; i++) {
+        addTicket(_raffleId, msg.sender);
+        splitTicketValue(_raffleId, msg.value.div(_ticketsTotal));
+      }
+    } else {
+      addTicket(_raffleId, msg.sender);
+      splitTicketValue(_raffleId, msg.value);
+    }
+  }
+
+  function addTicket(uint256 _raffleId, address _owner) internal {
+    raffles[_raffleId].tickets.push(Ticket(_owner, false, block.timestamp));
+
+    emit TicketCreated(raffles[_raffleId].tickets.length, msg.sender);
+
+    uint256 raffleTicketsTotal = raffles[_raffleId].tickets.length;
+    uint256 raffleTicketGoal = raffles[_raffleId].ticketGoal;
+
+    if (raffleTicketsTotal == raffleTicketGoal) {
+      finishRaffle(_raffleId);
+      setWinner(_raffleId);
+    }
+  }
+
+  function getTicketsCount(uint256 _raffleId) public view returns (uint256) {
+    Raffle storage raffle = raffles[_raffleId];
+    return raffle.tickets.length;
+  }
+
+  // Claim functions
+  function claimReward(uint256 _raffleId) onlyFinished(_raffleId) public payable {
+    Raffle storage raffle = raffles[_raffleId];
+    Ticket storage ticket = raffle.tickets[raffle.winner];
+
+    require(raffle.prizeBalance > 0, "This raffle hasn't prize");
+    require(ticket.owner == msg.sender, "This function is restricted to the raffle's winner");
+    require(ticket.claimed == false, "The reward already claimed");
+
+    payable(ticket.owner).transfer(raffle.prizeBalance);
+
+    ticket.claimed = true;
+    totalClaimedReward += raffle.prizeBalance;
+
+    emit RewardClaimed(_raffleId, raffle.prizeBalance);
+  }
+
+  function claimOwnerBalance(uint256 _raffleId) onlyOwner(_raffleId) onlyFinished(_raffleId) public {
+    Raffle storage raffle = raffles[_raffleId];
+
+    require(raffle.ownerBalance > 0, "This raffle hasn't prize");
+    require(raffle.status == Status.Finished, "The raffle balance already claimed");
+
+    payable(raffle.owner).transfer(raffle.ownerBalance);
+
+    emit OwnerBalanceClaimed(_raffleId, raffle.ownerBalance);
+
+    raffle.status = Status.Completed;
+    totalClaimedOwner += raffle.ownerBalance;
+  }
+
+  function claimFeeBalance() onlyAdmin() public {
+    require(adminFeeBalance > 0, "Raffle didnt have any fee");
+    payable(admin).transfer(adminFeeBalance);
+    adminFeeBalance = 0;
   }
 }

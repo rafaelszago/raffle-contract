@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@openzeppelin/contracts": "^4.3.2"
+    "@openzeppelin/contracts": "^4.4.0"
   },
   "name": "raffle-contract",
   "version": "1.0.0",
@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "@openzeppelin/test-helpers": "^0.5.15",
+    "@openzeppelin/truffle-upgrades": "^1.11.0",
     "faker": "^5.5.3",
     "truffle-assertions": "^0.9.2"
   }

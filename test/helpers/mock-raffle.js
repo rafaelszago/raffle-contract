@@ -28,7 +28,7 @@ const makeRaffle = async (contract, account, raffleParams) => {
 const mockCreateRaffleParams = (
   name = faker.random.word(),
   prizePercentage = 10,
-  ticketPrice = toWei('0.2'),
+  ticketPrice = toWei('0.1'),
   ticketGoal = 10
 ) => {
   return {
