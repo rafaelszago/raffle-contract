@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.0"
+    "@openzeppelin/contracts": "^4.4.0",
+    "mathjs": "^10.0.2"
   },
   "name": "raffle-contract",
   "version": "1.0.0",

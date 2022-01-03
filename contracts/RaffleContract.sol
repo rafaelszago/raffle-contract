@@ -8,7 +8,7 @@ contract RaffleContract {
 
   address public admin;
   uint256 public adminFeePercent;
-  uint256 private adminFeeBalance;
+  uint256 private adminBalance;
   uint256 public rafflesCount;
   uint256 public totalClaimedReward;
   uint256 public totalClaimedOwner;
@@ -48,7 +48,7 @@ contract RaffleContract {
   event RaffleFinished(uint256 id, string name);
   event TicketCreated(uint256 id, address owner);
   event WinnerDefined(uint256 raffleId, address winner);
-  event RewardClaimed(uint256 raffleId, uint256 prizeBalance);
+  event RewardBalanceClaimed(uint256 raffleId, uint256 prizeBalance);
   event OwnerBalanceClaimed(uint256 raffleId, uint256 ownerBalance);
 
   constructor() {
@@ -103,7 +103,7 @@ contract RaffleContract {
   function splitTicketValue(uint256 _raffleId, uint256 _value) internal {
     Raffle storage raffle = raffles[_raffleId];
     uint256 fee = _value.mul(adminFeePercent).div(100);
-    adminFeeBalance += fee;
+    adminBalance += fee;
     uint256 valueTotal = _value.sub(fee);
     uint256 prizeBalance = valueTotal.mul(raffle.prizePercentage).div(100);
     uint256 ownerBalance = valueTotal.sub(prizeBalance);
@@ -224,7 +224,7 @@ contract RaffleContract {
     ticket.claimed = true;
     totalClaimedReward += raffle.prizeBalance;
 
-    emit RewardClaimed(_raffleId, raffle.prizeBalance);
+    emit RewardBalanceClaimed(_raffleId, raffle.prizeBalance);
   }
 
   function claimOwnerBalance(uint256 _raffleId) onlyOwner(_raffleId) onlyFinished(_raffleId) public {
@@ -241,9 +241,9 @@ contract RaffleContract {
     totalClaimedOwner += raffle.ownerBalance;
   }
 
-  function claimFeeBalance() onlyAdmin() public {
-    require(adminFeeBalance > 0, "Raffle didnt have any fee");
-    payable(admin).transfer(adminFeeBalance);
-    adminFeeBalance = 0;
+  function claimAdminBalance() onlyAdmin() public {
+    require(adminBalance > 0, "Raffle didnt have any fee");
+    payable(admin).transfer(adminBalance);
+    adminBalance = 0;
   }
 }
