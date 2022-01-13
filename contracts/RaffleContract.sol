@@ -43,10 +43,6 @@ contract RaffleContract {
 
   mapping(uint256 => Raffle) public raffles;
 
-  //
-  // Raffle Events
-  //
-
   event RaffleCreated(uint256 id, string name);
   event RaffleFinished(uint256 id, string name);
 
@@ -58,10 +54,6 @@ contract RaffleContract {
     totalClaimedOwner = 0;
     totalClaimedReward = 0;
   }
-
-  //
-  // Modifiers
-  //
 
   modifier onlyAdmin() {
     require(msg.sender == admin, "This function is restricted to the admin");
@@ -92,10 +84,6 @@ contract RaffleContract {
     _;
   }
 
-  //
-  // Helpers functions
-  //
-
   function generateRandomNumber(uint256 _maxValue)
     internal
     view
@@ -110,10 +98,6 @@ contract RaffleContract {
       )
     ).mod(_maxValue);
   }
-
-  //
-  // Raffle functions
-  //
 
   function createRaffle(string memory _name, uint256 _prizePercentage, uint256 _ticketPrice, uint256 _ticketGoal) public {
     require(_prizePercentage <= 100, "Prize percentage must be 100 or lower");
@@ -154,22 +138,14 @@ contract RaffleContract {
     return raffles[_raffleId].tickets[raffles[_raffleId].winner];
   }
 
-  function tryToFinish(uint256 _raffleId) internal {
-    Raffle storage raffle = raffles[_raffleId];
-
-    if (raffle.status == Status.Active) {
-      if (raffle.tickets.length == raffle.ticketGoal) {
-        finishRaffle(_raffleId);
-      }
-      if (raffle.endDate <= block.timestamp) {
-        finishRaffle(_raffleId);
-      }
+  function tryToFinish(uint256 _raffleId) onlyActive(_raffleId) public {
+    if (raffles[_raffleId].tickets.length == raffles[_raffleId].ticketGoal) {
+      finishRaffle(_raffleId);
+    }
+    if (raffles[_raffleId].endDate <= block.timestamp) {
+      finishRaffle(_raffleId);
     }
   }
-
-  //
-  // Ticket functions
-  //
 
   function getTicket(uint256 _raffleId, uint256 _ticketId) public view returns(Ticket memory) {
     return raffles[_raffleId].tickets[_ticketId];
@@ -195,17 +171,15 @@ contract RaffleContract {
 
     for (uint256 i = 0; i < _ticketsTotal; i++) {
       raffle.tickets.push(Ticket(msg.sender, false, block.timestamp));
-      tryToFinish(_raffleId);
     }
+
+    tryToFinish(_raffleId);
   }
 
   function getTicketsCount(uint256 _raffleId) public view returns(uint256) {
     return raffles[_raffleId].tickets.length;
   }
 
-  //
-  // Claim functions
-  //
   function claimReward(uint256 _raffleId) onlyFinished(_raffleId) public {
     Raffle storage raffle = raffles[_raffleId];
     Ticket storage ticket = raffle.tickets[raffle.winner];
@@ -221,7 +195,9 @@ contract RaffleContract {
   }
 
   function claimOwnerBalance(uint256 _raffleId) onlyOwner(_raffleId) public {
-    tryToFinish(_raffleId);
+    if (raffles[_raffleId].status == Status.Active) {
+      tryToFinish(_raffleId);
+    }
 
     require(raffles[_raffleId].status == Status.Finished, "The raffle is running");
     require(raffles[_raffleId].ownerBalance > 0, "This raffle hasn't prize");

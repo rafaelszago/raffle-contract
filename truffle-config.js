@@ -10,5 +10,6 @@ module.exports = {
     solc: {
       version: "^0.8.10"
     }
-  }
+  },
+  plugins: ["solidity-coverage"]
 };
