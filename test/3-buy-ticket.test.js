@@ -59,6 +59,10 @@ contract('Raffle Contract', async (accounts) => {
           value: raffleParams.ticketPrice
         })
       )
+
+      const tickets = await contract.getTickets(raffleId)
+
+      assert.equal(tickets.length, 1)
     })
 
     it('should add a ticket with correct params', async () => {

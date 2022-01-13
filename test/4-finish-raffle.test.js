@@ -101,6 +101,9 @@ contract('Raffle Contract', async (accounts) => {
 
       const raffle = await contract.raffles(raffleId)
       assert.equal(raffle.status, '1')
+
+      const winner = await contract.checkWinner(raffleId)
+      assert.equal(winner.owner, accounts[0])
     })
   })
 })

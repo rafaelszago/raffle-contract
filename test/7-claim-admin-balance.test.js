@@ -23,7 +23,22 @@ contract('Raffle Contract', async (accounts) => {
       )
     })
 
-    it('should claim admin balance', async () => {
+    it('should return an exception if didnt have any balance', async () => {
+      const contract = await makeSut()
+      const raffleParams = mockCreateRaffleParams()
+      const { raffleId } = await makeRaffle(contract, accounts[0], raffleParams)
+
+      await contract.buyTicket(raffleId, 10, {
+        from: accounts[0],
+        value: raffleParams.ticketPrice * 10
+      })
+
+      await truffleAssert.passes(
+        contract.claimAdminBalance({ from: accounts[0] })
+      )
+    })
+
+    it('should pay fee to admin', async () => {
       const contract = await makeSut()
       const raffleParams = mockCreateRaffleParams()
       const adminBalance = await contract.adminBalance()
