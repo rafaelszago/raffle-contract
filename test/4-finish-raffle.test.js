@@ -1,5 +1,6 @@
 const { makeSut, mockCreateRaffleParams, makeRaffle } = require('./helpers/mock-raffle')
 const truffleAssert = require('truffle-assertions')
+const { time } = require('@openzeppelin/test-helpers')
 
 contract('Raffle Contract', async (accounts) => {
   describe('Finish raffle', async () => {
@@ -14,7 +15,6 @@ contract('Raffle Contract', async (accounts) => {
       })
 
       const raffle = await contract.raffles(raffleId)
-
       assert.equal(raffle.status, '0')
     })
 
@@ -44,7 +44,62 @@ contract('Raffle Contract', async (accounts) => {
       })
 
       const raffle = await contract.raffles(raffleId)
+      assert.equal(raffle.status, '1')
+    })
 
+    it('should finish if owner claim his balance after reach deadline', async () => {
+      const contract = await makeSut()
+      const raffleParams = mockCreateRaffleParams()
+
+      await contract.updateRafflesExpiration(10)
+
+      const { raffleId } = await makeRaffle(contract, accounts[0], raffleParams)
+
+      await contract.buyTicket(raffleId, 1, {
+        from: accounts[0],
+        value: raffleParams.ticketPrice
+      })
+      await time.increase(10)
+      await contract.claimOwnerBalance(raffleId)
+
+      const raffle = await contract.raffles(raffleId)
+      assert.equal(raffle.status, '1')
+    })
+
+    it('should return an exception if try to finish a raffle without tickets', async () => {
+      const contract = await makeSut()
+      const raffleParams = mockCreateRaffleParams()
+
+      await contract.updateRafflesExpiration(10)
+
+      const { raffleId } = await makeRaffle(contract, accounts[0], raffleParams)
+
+      await time.increase(10)
+
+      await truffleAssert.fails(
+        contract.tryToFinish(raffleId),
+        'revert',
+        'The raffle didnt have any tickets'
+      )
+    })
+
+    it('should finish a raffle after reach deadline', async () => {
+      const contract = await makeSut()
+      const raffleParams = mockCreateRaffleParams()
+
+      await contract.updateRafflesExpiration(10)
+
+      const { raffleId } = await makeRaffle(contract, accounts[0], raffleParams)
+
+      await contract.buyTicket(raffleId, 1, {
+        from: accounts[0],
+        value: raffleParams.ticketPrice
+      })
+
+      await time.increase(10)
+      await contract.tryToFinish(raffleId)
+
+      const raffle = await contract.raffles(raffleId)
       assert.equal(raffle.status, '1')
     })
   })
