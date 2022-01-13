@@ -1,10 +1,38 @@
-# Raffle.land Contract
+# <img src="logo.svg" alt="RaffleLand" height="40px">
 
-Raffle.land contract written in Solidity
+RaffleLand is a Web3 Application to create raffles in blockchain.
 
-## Installation
+## Features
 
-## Build
+- truffle
+- eslint
+- solhint
+- solidity-coverage
+- faker
+- @openzeppelin/test-helpers
 
-## Test
+## Overview
 
+### Installation
+
+Install the project dependencies.
+
+`yarn install`
+
+### Build
+
+Build the project for production.
+
+`yarn build`
+
+### Test
+
+Test the project.
+
+`yarn test`
+
+### Lint
+
+Lint the code.
+
+``yarn lint``
