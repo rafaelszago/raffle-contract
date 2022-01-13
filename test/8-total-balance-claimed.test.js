@@ -5,7 +5,7 @@ contract('Raffle Contract', async (accounts) => {
     it('should return total balance claimed', async () => {
       const contract = await makeSut()
       const totalBalanceClaimed = await contract.totalBalanceClaimed()
-      assert.equal(totalBalanceClaimed)
+      assert.equal(totalBalanceClaimed, 0)
     })
   })
 })
