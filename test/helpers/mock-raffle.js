@@ -16,7 +16,8 @@ const makeRaffle = async (contract, account, raffleParams) => {
     { from: account }
   )
 
-  const raffleId = await contract.rafflesCount()
+  const raffleCount = await contract.rafflesCount()
+  const raffleId = raffleCount - 1
   const raffle = await contract.getRaffle(raffleId)
 
   return {

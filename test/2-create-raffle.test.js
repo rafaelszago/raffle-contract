@@ -35,6 +35,22 @@ contract('Raffle Contract', async (accounts) => {
       )
     })
 
+    it('should return an exception if ticketGoal is lower than 10', async () => {
+      const contract = await makeSut()
+      const raffleParams = mockCreateRaffleParams()
+      await truffleAssert.fails(
+        contract.createRaffle(
+          raffleParams.name,
+          raffleParams.prizePercentage,
+          raffleParams.ticketPrice,
+          9,
+          { from: accounts[1] }
+        ),
+        'revert',
+        'Ticket goal must be 10 or greater'
+      )
+    })
+
     it('should create raffle and emit event RaffleCreated', async () => {
       const contract = await makeSut()
       const raffleParams = mockCreateRaffleParams()
