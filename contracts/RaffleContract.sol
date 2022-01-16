@@ -114,7 +114,7 @@ contract RaffleContract {
             _prizePercentage <= 100,
             "Prize percentage must be 100 or lower"
         );
-        require(_prizePercentage >= 0, "Prize percentage must be 0 or greater");
+        require(_prizePercentage >= 25, "Prize percentage must be 25 or greater");
         require(
             _ticketPrice >= 0.01 ether,
             "Ticket price must be 0.01 BNB or greater"
