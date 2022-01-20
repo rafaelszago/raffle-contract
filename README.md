@@ -1,7 +1,7 @@
 [![Donate with Ethereum](https://en.cryptobadges.io/badge/micro/0xdE7A920df8569D005B911e2C7b0e577C8Ecd7283)](https://en.cryptobadges.io/donate/0xdE7A920df8569D005B911e2C7b0e577C8Ecd7283)
 [![NPM v8.3.0](https://img.shields.io/badge/npm-v8.3.0-blue)](https://www.npmjs.com/)
 [![Build Status](https://app.travis-ci.com/rafaelszago/raffle-contract.svg?token=q4WzCpHWjLEyQeYesKWe&branch=develop)](https://app.travis-ci.com/rafaelszago/raffle-contract)
-[![Coverage Status](https://coveralls.io/repos/github/rafaelszago/raffle-contract/badge.svg?branch=develop)](https://coveralls.io/github/rafaelszago/raffle-contract?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/rafaelszago/raffle-contract/badge.svg?branch=master)](https://coveralls.io/github/rafaelszago/raffle-contract?branch=master)
 # <img src="logo.svg" alt="RaffleLand" height="40px">
 
 > RaffleLand is a Web3 Application to create raffles in blockchain.
