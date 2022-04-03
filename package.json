@@ -13,7 +13,7 @@
     "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\""
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.0",
+    "@openzeppelin/contracts": "^4.4.2",
     "truffle": "^5.4.28"
   },
   "devDependencies": {
