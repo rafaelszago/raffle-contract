@@ -273,9 +273,9 @@ contract RaffleContract {
 
     function claimAdminBalance() public onlyAdmin {
         require(adminBalance > 0, "You dont have any balance");
-        adminBalance = 0;
-
         payable(admin).transfer(adminBalance);
+
+        adminBalance = 0;
     }
 
     function totalBalanceClaimed() public view returns (uint256) {
