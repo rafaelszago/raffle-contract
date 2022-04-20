@@ -114,7 +114,7 @@ contract RaffleContract {
             _prizePercentage <= 100,
             "Prize percentage must be 100 or lower"
         );
-        require(_prizePercentage >= 0, "Prize percentage must be 0 or greater");
+        require(_prizePercentage >= 25, "Prize percentage must be 25 or greater");
         require(
             _ticketPrice >= 0.01 ether,
             "Ticket price must be 0.01 BNB or greater"
@@ -273,9 +273,9 @@ contract RaffleContract {
 
     function claimAdminBalance() public onlyAdmin {
         require(adminBalance > 0, "You dont have any balance");
-        adminBalance = 0;
-
         payable(admin).transfer(adminBalance);
+
+        adminBalance = 0;
     }
 
     function totalBalanceClaimed() public view returns (uint256) {
